@@ -18,10 +18,10 @@
 	\null\vfill
 
 	\begin{center}
-		{\Huge Regulácia výšky hladiny }
+		{\Huge Meranie a aproximácia prevodovej charakteristiky tepelného systému }
 		\vskip 2cm
 
-		{\Large Cvičenie č. 10}
+		{\Large Cvičenie č. 11}
 		\vskip 0.5cm
 
 		{\large Spojité procesy}
@@ -84,277 +84,64 @@ sú zadávané v~percentách. Tuto hodnotu budeme v priebeju merania prestavovoa
 
 Počas priebehu simulácie sa spomínaná žiadaná hodnota výšky hladiny mení. Priebeh zmien tejto veličiny je znázornený na~obrázku Obr.~\ref{fig:mt2}.
 Na zaciatku merania sme nastavili ohrev spiraly na 10\%. Postupne sme zvyšovali hodnotu ohrevu až k~100\%.
-Kedze sme prvu hodnotu nenastavili na 0\%, tak sme meranie zopakovali.
+Kedze sme prvu hodnotu nenastavili na 0\%, tak sme meranie zopakovali. Pri druhom merani sme dostali hodnoty,
+ktore boli vyssie ako hodnoty z prveho merania. Pri aproximácia budeme pouzivat hodnoty z druhej casti merania
 
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[width=\textwidth]{./include/meranieT2.png}
-		\caption{Priebeh meranej teploty na snímači T2.}
-		\label{fig:mt2}
-	\end{center}
-	\hfill
-\end{figure}
+% \begin{figure}[!htbp]
+% 	\begin{center}
+% 		\includegraphics[width=\textwidth]{./include/meranieT2.png}
+% 		\caption{Priebeh meranej teploty na snímači T2.}
+% 		\label{fig:mt2}
+% 	\end{center}
+% 	\hfill
+% \end{figure}
 
+Merane hodnoty nam vysli nasledovne
+
+\begin{center}
+\begin{tabular}{ |c|c|c| }
+ \hline
+ ohrev [\%] & T1 & T2 \\
+ \hline
+   0 & 29.3 & 29 \\
+  10 & 33.5 & 33 \\
+  20 & 38 & 37 \\
+  30 & 42 & 41\\
+  40 & 46.5 & 45\\
+  50 & 49.5 & 47.5\\
+  60 & 52.5 & 50 \\
+  70 & 54 & 51.3 \\
+  80 & 54.5 & 51.6 \\
+  90 & 55 & 52 \\
+ 100 & 55 & 52 \\
+ \hline
+\end{tabular}
+\end{center}
 \newpage
 
-\section{Merania}
-\label{sec:merania}
-
-\subsection{Meranie 1}
-\label{sec:meranie1}
-
-V~prvom zadaní sme zvolili prednastavené hodnoty parametrov regulátora. Tie sú zo zadania nastavené nasledovne:
-
-\begin{center}
-\begin{tabular}{ |c|c| }
- \hline
- $K_p [-]$ & 15 \\
- $T_i [-]$ & 20 \\
- $T_d [-]$ & 0,05 \\
- \hline
-\end{tabular}
-\end{center}
-
-Výsledok simulácie môžeme vidieť na~obrázku Obr.~\ref{fig:m1}.
-
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[width=\textwidth]{./include/meranie1.png}
-	\end{center}
-	\caption{Graf žiadanej a~meranej hodnoty výšky hladiny na~snímači v~prvom meraní.}
-	\label{fig:m1}
-\end{figure}
-
-
-Toto nastavenie regulátorov ovplyvnilo okolie, v~ktorom sme nastavovali hodnoty v~ďalších meraniach. Po zistení
-priebehu výstupného signálu zobrazeného na~Obr.~\ref{fig:m1} sme sa snažili dosiahnuť čo~najrýchlejšiu reguláciu
-výstupného signálu zo systému. Na dosiahnutie tohto cieľu sme zväčšili derivačnú zložku regulátora.
-Tá zabezpečuje najrýchlejšiu odpoveď regulátora na~zmenu výstupného signálu. Táto zložka zároveň zavádza šum
-do~akčného zásahu systému. Ďalšia zložka, ktorá zabezpečuje postupný rast akčného zásahu systému je integračná
-zložka. Tá sa skladá ako bolo spomenutý v~sekcii~\ref{sec:teoria} z~parametrov $K_p$ a~$T_i$. Pričom táto zložka
-priamo úmerne závisí od~zložky $K_p$ a~nepriamo od~$T_i$. Zmenu, ktorú sme vykonali bola zmena parametru
-zosilnenia regulátora $K_p$.
-
+\section{Meranie}
+\label{sec:meranie}
 
 \clearpage
 
-\subsection{Meranie 2}
-\label{sec:meranie2}
-
-V druhom meraní sme si zvolili hodnoty:
-Výsledok simulácie môžeme vidieť na~obrázku Obr.~\ref{fig:m1}.
-
-\begin{center}
-\begin{tabular}{ |c|c| }
- \hline
- $K_p [-]$ & 30 \\
- $T_i [-]$ & 20 \\
- $T_d [-]$ & 0,1 \\
- \hline
-\end{tabular}
-\end{center}
-
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[width=\textwidth]{./include/meranie2.png}
-	\end{center}
-	\caption{Graf žiadanej a~meranej hodnoty výšky hladiny na~snímači v~druhom meraní.}
-	\label{fig:m2}
-\end{figure}
-
-Pri~druhom meraní sme si zmenili parametre regulátora. V porovnaní s~prvým meraním si môžeme všimnúť,
-že preregulovanie pri vypúšťaní nádrže nebolo také viditeľné. Zároveň nábeh výšky vodného stĺpca v~nádrži
-z~0cm na~10cm bol rýchlejší. Tieto výhody prišli aj s~jednou nevýhodou. Zašumenie výstupného signálu
-systému (výšky hladiny) bolo viditeľnejšie.
+\section{Linearna aproximacia}
+\label{sec:lin}
 
 \clearpage
 
-\subsection{Meranie 3}
-\label{sec:meranie3}
-
-V treťom meraní sme si zvolili hodnoty:
-
-\begin{center}
-\begin{tabular}{ |c|c| }
- \hline
- $K_p [-]$ & 50 \\
- $T_i [-]$ & 20 \\
- $T_d [-]$ & 0,5 \\
- \hline
-\end{tabular}
-\end{center}
-
-Výsledok simulácie môžeme vidieť na~obrázku Obr.\ref{fig:m3}.
-
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[width=\textwidth]{./include/meranie3.png}
-	\end{center}
-	\caption{Graf žiadanej a~meranej hodnoty výšky hladiny na~snímači v~treťom meraní.}
-	\label{fig:m3}
-\end{figure}
-
-V treťom meraní sme sa snažili dosiahnuť podobný ale~výraznejší efekt ako v~meraní druhom. Prestavenie
-parametrov regulátora však nami chcený efekt neprinieslo. Čo sa ale~zlepšilo bolo skoršie ustálenie výšky
-hladiny na~žiadanej hodnote pri prvom skoku žiadanej hodnoty. Na druhej strane pri vypúšťaní nádrže sa jej
-hladina pohybovala vo väčšom rozptyle okolia žiadanej hodnoty.
+\section{Kvadraticka aproximacia}
+\label{sec:kvad}
 
 \clearpage
 
-\subsection{Meranie 4}
-\label{sec:meranie4}
-
-V štvrtom meraní sme si zvolili hodnoty. 
-
-\begin{center}
-\begin{tabular}{ |c|c| }
- \hline
- $K_p [-]$ & 20 \\
- $T_i [-]$ & 10 \\
- $T_d [-]$ & 0,1 \\
- \hline
-\end{tabular}
-\end{center}
-
-Výsledok simulácie môžeme vidieť na~obrázku Obr.\ref{fig:m4}.
-
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[width=\textwidth]{./include/meranie4.png}
-	\end{center}
-	\caption{Graf žiadanej a~meranej hodnoty výšky hladiny na~snímači vo~štvrtom meraní.}
-	\label{fig:m4}
-\end{figure}
-
-Vo štvrtom meraní sme zvolili odlišný postup. Parameter $K_p$ sme zmenili na~hodnotu 20. Parameter $T_i$
-sme zmenili na~hodnotu 10. Tento postup zabezpečí zväčšenie integračnej zložky pričom proporcionálna
-zložka a~derivačná zložka ostanú nezmenené. Pri tejto konfigurácii je ustálenie signálu rovnako
-bez viditeľného preregulovania pri vypúšťaní nádrže a~ustálenie zvyšujúcej sa hladiny nádrže sa ustáli
-pomerne rýchlo pri prvej skokovej zmene žiadanej hodnoty výšky hladiny.
-
-\clearpage
-
-\subsection{Meranie 5}
-\label{sec:meranie5}
-
-V piatom meraní sme si zvolili hodnoty. 
-
-\begin{center}
-\begin{tabular}{ |c|c| }
- \hline
- $K_p [-]$ & 50 \\
- $T_i [-]$ & 20 \\
- $T_d [-]$ & 0,1 \\
- \hline
-\end{tabular}
-\end{center}
-
-Výsledok simulácie môžeme vidieť na~obrázku Obr.\ref{fig:m5}.
-
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[width=\textwidth]{./include/meranie5.png}
-	\end{center}
-	\caption{Graf žiadanej a~meranej hodnoty výšky hladiny na~snímači v~piatom meraní.}
-	\label{fig:m5}
-\end{figure}
-
-V piatom meraní sme skúsili zväčšiť hodnoty každého parametra jeden a~pol násobne oproti minulému meraniu 
-pričom integračnú zložku sme zmenšili ešte o polovicu. Tento postup zaviedol rýchly nábeh a~z~prechodovej
-charakteristiky sa stal kmitavý proces s~preregulovaním. Tento jav nebolo vidno voľným okom na~prítoku nádrže.
-
-\clearpage
-
-\subsection{Meranie 6}
-\label{sec:meranie6}
-
-V šiestom meraní sme si zmenili hodnotu uzatvorenia výpustného ventilu zo 70\% na~50 \%, hodnoty
-\textit{Kp}, \textit{Ti} a~\textit{Td} sme ponechali rovnaké. Výsledok simulácie môžeme vidieť na~Obr.~\ref{fig:m6}.
-
-\begin{center}
-\begin{tabular}{ |c|c| }
- \hline
- $K_p [-]$ & 50 \\
- $T_i [-]$ & 20 \\
- $T_d [-]$ & 0,1 \\
- \hline
- $Vstupny\_ventil[\%]$ & 100 \\
- $Vystupny\_ventil[\%]$ & 50 \\
- \hline
-\end{tabular}
-\end{center}
-
-Výsledok simulácie môžeme vidieť na~obrázku Obr.~\ref{fig:m6}.
-
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[width=\textwidth]{./include/meranie6.png}
-	\end{center}
-	\caption{Graf žiadanej a~meranej hodnoty výšky hladiny na~snímači v~šiestom meraní.}
-	\label{fig:m6}
-\end{figure}
-
-Po diskusii s~cvičiacim sme sa dohodli na~zmene hodnoty výstupného ventilu a~odsimulovania tejto zmeny.
-V šiestom meraní sme si prestavili výstupný ventil z~70\% na~50\%. Tento postup zaviedol do~procesu
-obmedzenie, ktoré sa prejavilo na~zrýchlení napúšťania nádrže a~spomalenia vypúšťania vody z~nádrže.
-
-\clearpage
-
-\subsection{Meranie 7}
-\label{sec:meranie7}
-
-V siedmom meraní sme si zmenili hodnotu uzatvorenia výpustného ventilu a~hodnoty \textit{Kp}, \textit{Ti}
-a~\textit{Td} sme ponechali rovnaké.
-
-\begin{center}
-\begin{tabular}{ |c|c| }
- \hline
- $K_p [-]$ & 50 \\
- $T_i [-]$ & 20 \\
- $T_d [-]$ & 0,1 \\
- \hline
- $Vstupny\_ventil[\%]$ & 100 \\
- $Vystupny\_ventil[\%]$ & 80 \\
- \hline
-\end{tabular}
-\end{center}
-
-Výsledok simulácie môžeme vidieť na~Obr.~\ref{fig:m7}.
-
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[width=\textwidth]{./include/meranie7.png}
-	\end{center}
-	\caption{Graf žiadanej a~meranej hodnoty výšky hladiny na~snímači v~siedmom meraní.}
-	\label{fig:m7}
-\end{figure}
-
-V posledom siedmom meraní sme zmenili hodnotu výstupného ventilu z~50\% na~80\%. Hodnoty parametrov
-regulátora sme ponechali rovnaké ako posledných dvoch meraniach, aby sme vedeli urovnať efekt zmeny
-výstupného filtra. Tato zmena spôsobila pomalšie napúšťanie nádrže a~zároveň rýchlejšie vypustenie
-vody z~nádrže.
+\section{Odmocninova aproximacia}
+\label{sec:odm}
 
 \clearpage
 
 \section{Zhrnutie}
 \label{sec:zhrnutie}
 
-
-Môžeme si všimnúť, že pri základných hodnotách prítoku a~odtoku zmena PID regulátora pomocou zmeny parametrov
-$K_p$, $T_i$ a~$T_d$ má minimálny vplyv na~rýchlosť napúšťania a~vypúšťania nádrže. Môžeme tým hlavne
-ovplyvňovať stabilitu vodnej hladiny na~požadovanej hodnote.
-
-Pri~takto navrhnutom systéme môžme PID regulátorom ovplyvniť strmosť napúšťania a~vypúšťania iba do~určitej
-miery lebo je limitovaná zvoleným ventilom. Ako môžeme vidieť v~grafe merania v~sekcii \ref{sec:meranie6}
-znížením rýchlosti odtoku sa nám síce podarilo zlepšiť rýchlosť napúšťania nádrže, ale~od~času 400s systém
-nestíhal vypúšťať vodu na~požadovanú hodnotu. Naopak v~poslednom meraní v~sekcii \ref{sec:meranie7} môžeme
-vidieť, že zvýšenie odtoku spôsobilo to, že síce vieme rýchlejšie vypúšťať vodu, ale~systém mal problém
-s~napúšťaním hlavne v~čase od~300s po~400s kedy je hladina vody najvyššia.
-
-Základne parametre uvedene v~zadaní sú postačujúce. Ich zmena v~danom okolí nemá veľký vplyv na~chovanie
-systému. Ak by sme chceli zmeniť systém tak aby presnejšie opisoval žiadanú hodnoty, tak by sme museli
-zmeniť parametre vstupného a~výstupného ventilu. Ich nastavenie vytvára limity pre vstupný a~vstupný
-prietok a~tým pádom vytvára systém s~inou dynamikou.
 
 \end{document}
 
