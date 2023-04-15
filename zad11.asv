@@ -12,8 +12,10 @@ l=ones(size(u)); % jednotkovy vektor
 % a) ----
 
 h1=[l,u]; % matica H
-theta1=inv(h1'*h1)*h1'*data'; % odhad parametrov
-y1=h1*theta1;   % vektor vystupov modelu
+theta1=inv(h1'*h1);
+theta2 =theta1*h1';
+theta3 = theta2*data'; % odhad parametrov
+y1=h1*theta3;   % vektor vystupov modelu
 % e=y-y1;   % vektor odchylok
 q1=e'*e;      % suma kvadratov odchylok 
 
@@ -27,7 +29,7 @@ y2 = h2 * theta_kvadr;
 % c) ----
 
 h3 = [l,sqrt(u)];
-theta_odmoc = inv(h3'*h3)*h3'*data';
+theta_odmoc = theta3;
 y3 = h3 * theta_odmoc;
 
 
@@ -36,13 +38,13 @@ y3 = h3 * theta_odmoc;
 hold on
 plot(u,data_wanted,'b', 'LineWidth', 2)
 plot(u,data,'r','LineWidth', 2)
-plot(u,y1,'g','LineWidth', 2)
-plot(u,y2,'k','LineWidth', 2)
+% plot(u,y1,'g','LineWidth', 2)
+% plot(u,y2,'k','LineWidth', 2)
 plot(u,y3,'c','LineWidth', 2)
 grid on
 legend('Ziadane hodnoty', ...
 	'Merane hodnoty', ...
-	'Linearna regresia', ...
+	'Linearna regresia'
 	'Kvadraticka regresia', ...
 	'Odmocninova regresia', ...
 	"Location","northwest")
