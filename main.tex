@@ -85,18 +85,18 @@ sú zadávané v~percentách. Tuto hodnotu budeme v priebeju merania prestavovoa
 Počas priebehu simulácie sa spomínaná žiadaná hodnota výšky hladiny mení. Priebeh zmien tejto veličiny je znázornený na~obrázku Obr.~\ref{fig:mt2}.
 Na zaciatku merania sme nastavili ohrev spiraly na 10\%. Postupne sme zvyšovali hodnotu ohrevu až k~100\%.
 Kedze sme prvu hodnotu nenastavili na 0\%, tak sme meranie zopakovali. Pri druhom merani sme dostali hodnoty,
-ktore boli vyssie ako hodnoty z prveho merania. Pri aproximácia budeme pouzivat hodnoty z druhej casti merania
+ktore boli vyssie ako hodnoty z prveho merania. Pri aproximácia budeme pouzivat hodnoty z druhej casti merania.
 
-% \begin{figure}[!htbp]
-% 	\begin{center}
-% 		\includegraphics[width=\textwidth]{./include/meranieT2.png}
-% 		\caption{Priebeh meranej teploty na snímači T2.}
-% 		\label{fig:mt2}
-% 	\end{center}
-% 	\hfill
-% \end{figure}
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=\textwidth]{./include/teplota.png}
+		\caption{Priebeh meranej teploty na snímači T2.}
+		\label{fig:mt2}
+	\end{center}
+	\hfill
+\end{figure}
 
-Merane hodnoty nam vysli nasledovne
+Merane hodnoty nam vysli nasledovne:
 
 \begin{center}
 \begin{tabular}{ |c|c|c| }
@@ -127,6 +127,8 @@ Merane hodnoty nam vysli nasledovne
 \section{Linearna aproximacia}
 \label{sec:lin}
 
+Pri lineárnej aproximácii sme potrebovali vytvoriť maticu H, vypočítať \(\theta\) pomocou Gaussovím vzťahom \(\theta = (H^TH)^-1H^Ty\), následne sme si pomocou vzťahu \(y_1 = H_1\theta_1\) vyjadrili funkciu opisujúcu fukciu pre výstupné veličiny. Hodnoty účelovej funkcie sme si vypočítali zo vzťahu \(Q1 = e^Te\). Na Obr.~\ref{fig:prevod} môžeme vidieť porovnanie prevodových funkcii s lineárnou aproximáciou.
+
 \clearpage
 
 \section{Kvadraticka aproximacia}
@@ -139,8 +141,19 @@ Merane hodnoty nam vysli nasledovne
 
 \clearpage
 
+
+
 \section{Zhrnutie}
 \label{sec:zhrnutie}
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=\textwidth]{./include/prevodove_funkcie.png}
+		\caption{Priebeh prevodových funkcii}
+		\label{fig:prevod}
+	\end{center}
+	\hfill
+\end{figure}
 
 
 \end{document}
