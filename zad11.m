@@ -32,6 +32,17 @@ theta_odmoc = theta3;
 y3 = h3 * theta_odmoc;
 
 
+% prevodova charakteristika
+x= out.tout;
+hold on
+plot(u,data_wanted,'b','DisplayName','Pozadovane hodnoty')
+plot(u,data,'r','DisplayName','Namerane hodnoty')
+plot(u,y1,'g','DisplayName','Aproximacia pomocou linearnej funkcie')
+plot(u,y2,'k','DisplayName','Aproximacia pomocou kvadratickej funkcie')
+plot(u,y3,'c','DisplayName','Aproximacia pomocou odmocninovej funkcie')
+hold off
+
+
 % vykreslenie grafu ----
 
 % x= out.tout;
