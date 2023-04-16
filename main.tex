@@ -18,7 +18,7 @@
 	\null\vfill
 
 	\begin{center}
-		{\Huge Meranie a aproximácia prevodovej charakteristiky tepelného systému }
+		{\Huge Meranie a~aproximácia prevodovej charakteristiky tepelného systému }
 		\vskip 2cm
 
 		{\Large Cvičenie č. 11}
@@ -75,7 +75,7 @@ v~programe \textit{Simulink} (Obr.~\ref{fig:schema}).
 \end{figure}
 
 V~tomto zapojení vidíme viacero vstupných signálov, tie sú už~preddefinované. \textbf{ventilator} reprezentuje
-na koľko percent funguje ventilátor v systéme. \textbf{ohrev} reprezentuje vstupný signál ohrevnej špirály,
+na~koľko percent funguje ventilátor v systéme. \textbf{ohrev} reprezentuje vstupný signál ohrevnej špirály,
 jeho hodnoty sú zadávané v~percentách. Túto hodnotu budeme v priebehu merania prestavovať. Bude sa meniť
 od 0\% po 100\% s krokom 10\%.
 
@@ -84,15 +84,15 @@ od 0\% po 100\% s krokom 10\%.
 \subsection{Úvod do~priebehu simulácie}
 \label{subsec:priebehSimulacie}
 
-Na~obrázku Obr.~\ref{fig:mt2} je znázornený priebeh simulácie tepelného systému s ohrevnou špirálou. Na začiatku
-merania sme nastavili ohrev špirály na 10\%. Postupne sme zvyšovali hodnotu ohrevu až k~100\%. Keďže sme prvú
-hodnotu nenastavili na 0\%, tak sme meranie zopakovali. Pri druhom meraní sme dostali hodnoty, ktoré boli vyššie
+Na~obrázku Obr.~\ref{fig:mt2} je znázornený priebeh simulácie tepelného systému s ohrevnou špirálou. Na~začiatku
+merania sme nastavili ohrev špirály na~10\%. Postupne sme zvyšovali hodnotu ohrevu až k~100\%. Keďže sme prvú
+hodnotu nenastavili na~0\%, tak sme meranie zopakovali. Pri druhom meraní sme dostali hodnoty, ktoré boli vyššie
 ako hodnoty z prvého merania. Pri aproximácia budeme použivať hodnoty z druhej časti merania.
 
 \begin{figure}[!htbp]
 	\begin{center}
 		\includegraphics[width=\textwidth]{./include/teplota_2.png}
-		\caption{Priebeh meranej teploty na snímači T2.}
+		\caption{Priebeh meranej teploty na~snímači T2.}
 		\label{fig:mt2}
 	\end{center}
 	\hfill
@@ -154,14 +154,14 @@ Kde tieto matice môžeme vyjadriť nasledovne:
 \end{figure}
 
 Lineárna aproximácia je najjednoduchšia aproximácia, ktorá sa používa pri aproximácii prevodovej
-charakteristiky. Na jej prevedenie sme vytvorili maticu \textbf{H}, vypočítali
+charakteristiky. Na~jej prevedenie sme vytvorili maticu \textbf{H}, vypočítali
 \(\theta\) Gaussovým vzťahom
 \begin{equation}
 	\theta = (H^TH)^{-1}H^Ty
 	\label{eq:gausEq}
 \end{equation}
 
-a následne sme pomocou vzťahu \(y_1 = H_1\theta_1\) vyjadrili funkciu opisujúcu funkciu pre výstupné
+a~následne sme pomocou vzťahu \(y_1 = H_1\theta_1\) vyjadrili funkciu opisujúcu funkciu pre výstupné
 veličiny.
 
 Hodnoty účelovej funkcie sme si vypočítali zo vzťahu 
@@ -171,7 +171,7 @@ Hodnoty účelovej funkcie sme si vypočítali zo vzťahu
 \end{equation}
 
 Obr.~\ref{fig:linApx} ukazuje priebeh lineárnej aproximácie tepelného systému a
-Obr.~\ref{fig:prevod} zobrazuje porovnanie prevodových funkcii a ich aproximácii.
+Obr.~\ref{fig:prevod} zobrazuje porovnanie prevodových funkcii a~ich aproximácii.
 
 
 \clearpage
@@ -209,14 +209,14 @@ Kde tieto matice môžeme vyjadriť nasledovne:
 \end{figure}
 
 Kvadratická aproximácia je druha aproximácia, ktorú sme použili.
-Na jej prevedenie sme vytvorili maticu \textbf{H}, vypočítali
-\(\theta\) Gaussovým vzťahom a následne sme pomocou vzťahu~\ref{eq:kvadApx2}
+Na~jej prevedenie sme vytvorili maticu \textbf{H}, vypočítali
+\(\theta\) Gaussovým vzťahom a~následne sme pomocou vzťahu~\ref{eq:kvadApx2}
 vyjadrili vzťah opisujúci funkciu pre výstupné veličiny. Opis kvadratickej
-regresie vidíme na obrázku Obr.~\ref{fig:kvadApx}.
+regresie vidíme na~obrázku Obr.~\ref{fig:kvadApx}.
 
 Hodnoty účelovej funkcie počítame rovnakým spôsobom ako vo vzťahu~\ref{eq:objFunkcia}.
 Obr.~\ref{fig:kvadApx} ukazuje priebeh kvadratickej aproximácie tepelného systému a
-Obr.~\ref{fig:prevod} zobrazuje porovnanie prevodových funkcii a ich aproximácii.
+Obr.~\ref{fig:prevod} zobrazuje porovnanie prevodových funkcii a~ich aproximácii.
 
 \clearpage
 
@@ -253,14 +253,14 @@ Kde tieto matice môžeme vyjadriť nasledovne:
 \end{figure}
 
 Odmocninová aproximácia je tretia aproximácia, ktorú sme použili.
-Na jej prevedenie sme vytvorili maticu \textbf{H}, vypočítali
-\(\theta\) Gaussovým vzťahom a následne sme pomocou vzťahu~\ref{eq:odmApx2}
+Na~jej prevedenie sme vytvorili maticu \textbf{H}, vypočítali
+\(\theta\) Gaussovým vzťahom a~následne sme pomocou vzťahu~\ref{eq:odmApx2}
 vyjadrili vzťah opisujúci funkciu pre výstupné veličiny. Opis odmocninovej
-regresie vidíme na obrázku Obr.~\ref{fig:kvadApx}.
+regresie vidíme na~obrázku Obr.~\ref{fig:kvadApx}.
 
 Hodnoty účelovej funkcie počítame rovnakým spôsobom ako vo vzťahu~\ref{eq:objFunkcia}.
-Obr.~\ref{fig:odmApx} ukazuje priebeh odmocninovej aproximácie tepelného systému a
-Obr.~\ref{fig:prevod} zobrazuje porovnanie prevodových funkcii a ich aproximácii.
+Obr.~\ref{fig:odmApx} ukazuje priebeh odmocninovej aproximácie tepelného systému
+a~Obr.~\ref{fig:prevod} zobrazuje porovnanie prevodových funkcii a~ich aproximácii.
 
 \clearpage
 
@@ -268,8 +268,8 @@ Obr.~\ref{fig:prevod} zobrazuje porovnanie prevodových funkcii a ich aproximác
 \label{sec:zhrnutie}
 
 V tejto úlohe sme aproximovali namerané hodnoty teploty \textit{T2} pomocou troch rôznych spôsobov
-\textit{lineárna} \ref{sec:lin}, \textit{kvadratická} \ref{sec:kvad} a \textit{odmocninová} \ref{sec:odm}.
-Ako môžeme vidieť na Obr.~\ref{fig:prevod} Kvadratická aproximácia nám najpresnejšie opisuje namerané hodnoty.
+\textit{lineárna} \ref{sec:lin}, \textit{kvadratická} \ref{sec:kvad} a~\textit{odmocninová} \ref{sec:odm}.
+Ako môžeme vidieť na~Obr.~\ref{fig:prevod} Kvadratická aproximácia nám najpresnejšie opisuje namerané hodnoty.
 
 \begin{figure}[!htbp]
 	\begin{center}
