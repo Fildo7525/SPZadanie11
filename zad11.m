@@ -46,8 +46,8 @@ legend('Ziadane hodnoty', ...
 	'Kvadraticka regresia', ...
 	'Odmocninova regresia', ...
 	"Location","northwest")
-xlabel("T2 [˚C]")
-ylabel("Vykon spiraly [%]")
+ylabel("T2 [˚C]")
+xlabel("Vykon spiraly [%]")
 hold off
 
 
@@ -59,7 +59,7 @@ y_graph= out.ScopeData.signals.values;
 y2_graph= out.ScopeData.signals(2).values;
 plot (x,y_graph)
 % hold on
-% plot (x,y2_graph)
+% plot (x,y2_graph,'r')
 ylabel("Temperature [°C]")
 xlabel("Time [s]")
 xlim([0, 2264.4])
