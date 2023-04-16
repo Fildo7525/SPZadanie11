@@ -2,7 +2,7 @@ clc;
 clear;
 close all;
 
-% load("out11.mat");
+load("out11.mat");
 data_wanted = [29.3 33.5 38 42 46.5 49.5 52.5 54 54.5 55 55];
 data =        [29 33 37 41 45 47.5 50 51.3 51.6 52 52];
 e = data_wanted - data;
@@ -32,7 +32,7 @@ y3 = h3 * theta_odmoc;
 
 
 % prevodova charakteristika
-% x= out.tout;
+figure(1)
 hold on
 plot(u,data_wanted,'b', 'LineWidth', 2)
 plot(u,data,'r','LineWidth', 2)
@@ -53,10 +53,15 @@ hold off
 
 % vykreslenie grafu ----
 
-% x= out.tout;
-% y_graph= out.ScopeData.signals.values;
-% y2_graph= out.ScopeData.signals(2).values;
-% % plot (x,y_graph)
+figure(2)
+x= 0:0.2:2264.4;
+y_graph= out.ScopeData.signals.values;
+y2_graph= out.ScopeData.signals(2).values;
+plot (x,y_graph)
+% hold on
 % plot (x,y2_graph)
-% ylabel("Temperature [°C]")
-% xlabel("Time [s]")
+ylabel("Temperature [°C]")
+xlabel("Time [s]")
+xlim([0, 2264.4])
+legend("T2")
+grid on
