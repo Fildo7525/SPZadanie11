@@ -34,11 +34,11 @@ y3 = h3 * theta_odmoc;
 % prevodova charakteristika
 figure(1)
 hold on
-plot(u,data_wanted,'b', 'LineWidth', 2)
-plot(u,data,'r','LineWidth', 2)
-plot(u,y1,'g','LineWidth', 2)
-% plot(u,y2,'k','LineWidth', 2)
-% plot(u,y3,'c','LineWidth', 2)
+plot(u,data_wanted,'b', 'LineWidth', 1.3)
+plot(u,data,'r','LineWidth', 1.3)
+plot(u,y1,'g','LineWidth', 1.3)
+plot(u,y2,'k','LineWidth', 1.3)
+plot(u,y3,'c','LineWidth', 1.3)
 grid on
 legend('Ziadane hodnoty', ...
 	'Merane hodnoty', ...
@@ -46,10 +46,13 @@ legend('Ziadane hodnoty', ...
 	'Kvadraticka regresia', ...
 	'Odmocninova regresia', ...
 	"Location","northwest")
+<<<<<<< HEAD
 % 	'Linearna regresia')
 % 	'Kvadraticka regresia', ...
 % 	'Odmocninova regresia', ...
 % 	"Location","northwest")
+=======
+>>>>>>> 5a3bd9f4c1aa4f83968818ab22a7fa1c7d0f3f70
 ylabel("T2 [˚C]")
 xlabel("Vykon spiraly [%]")
 hold off
@@ -57,6 +60,7 @@ hold off
 
 % vykreslenie grafu ----
 
+<<<<<<< HEAD
 % figure(2)
 % x= 0:0.2:2264.4;
 % y_graph= out.ScopeData.signals.values;
@@ -78,3 +82,17 @@ grid on
 % legend("T2")
 % grid on
 
+=======
+figure(2)
+x= 0:0.2:2264.4;
+y_graph= out.ScopeData.signals.values;
+y2_graph= out.ScopeData.signals(2).values;
+plot (x,y_graph)
+hold on
+plot (x,y2_graph)
+xlabel("Temperature [°C]")
+ylabel("Time [s]")
+xlim([0, 2264.4])
+legend("T2")
+grid on
+>>>>>>> 5a3bd9f4c1aa4f83968818ab22a7fa1c7d0f3f70
