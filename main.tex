@@ -224,9 +224,46 @@ Obr.~\ref{fig:prevod} zobrazuje porovnanie prevodových funkcií s lineárnou ap
 \section{Odmocninova aproximacia}
 \label{sec:odm}
 
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=\textwidth]{include/odmocninova_regresia.png}
+	\end{center}
+	\caption{Odmocninova aproximácia tepelného systému.}
+	\label{fig:kvadApx}
+\end{figure}
+
+Odhadnutý funkčný vzťah:
+
+\begin{equation}
+	\hat{y} = \hat{\theta}_0 + \hat{\theta}_1 \sqrt{u}
+	\label{eq:kvadApx}
+\end{equation}
+
+Vztah \ref{eq:linApx} mozeme prepisat do maticoveho tvaru:
+\begin{equation}
+	\hat{y} = H_2\hat{\theta}_2
+	\label{eq:kvadApx2}
+\end{equation}
+
+kde tieto moatice mozeme vyjadrit nasledovne:
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=0.25\textwidth]{include/defHandTheta3.png}
+	\end{center}
+\end{figure}
+
+Lineárna aproximácia je najjednoduchšia aproximácia, ktorá sa používa pri aproximácii prevodovej
+charakteristiky. Na jej prevedenie sme vytvorili maticu \textbf{H}, vypočítali
+\(\theta\) Gaussovým vzťahom
+
+a následne sme pomocou vzťahu~\ref{eq:kvadApx2} vyjadrili funkciu opisujúcu funkciu pre výstupné
+veličiny. Opis kvadratickej regresie vidime na obrazku Obr.~\ref{fig:kvadApx}.
+
+Hodnoty účelovej funkcie pocitame rovnakym sposobom ako vo vztahu~\ref{eq:objFunkcia}.
+Obr.~\ref{fig:kvadApx} ukazuje priebeh linearnej aproximácie tepelneho systemu a
+Obr.~\ref{fig:prevod} zobrazuje porovnanie prevodových funkcií s lineárnou aproximáciou.
 \clearpage
-
-
 
 \section{Zhrnutie}
 \label{sec:zhrnutie}
