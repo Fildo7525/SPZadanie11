@@ -91,7 +91,7 @@ ako hodnoty z prvého merania. Pri aproximácia budeme použivať hodnoty z druh
 
 \begin{figure}[!htbp]
 	\begin{center}
-		\includegraphics[width=\textwidth]{./include/teplota.png}
+		\includegraphics[width=\textwidth]{./include/teplota_2.png}
 		\caption{Priebeh meranej teploty na snímači T2.}
 		\label{fig:mt2}
 	\end{center}
@@ -121,15 +121,57 @@ Merané hodnoty z druhej časti nám vyšli následovne:
 \end{center}
 \newpage
 
-\section{Linearna aproximacia}
+\section{Lineárna aproximácia}
 \label{sec:lin}
 
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=\textwidth]{include/linearna_regresia.png}
+	\end{center}
+	\caption{Lineárna aproximácia tepelného systému.}
+	\label{fig:linApx}
+\end{figure}
+
+Odhadnutý funkčný vzťah:
+
+\begin{equation}
+	\hat{y} = \hat{\theta}_0 + \hat{\theta}_1u
+	\label{eq:linApx}
+\end{equation}
+
+Vztah \ref{eq:linApx} mozeme prepisat do maticoveho tvaru:
+\begin{equation}
+	\hat{y} = H_1\hat{\theta}_1
+	\label{eq:linApx2}
+\end{equation}
+
+kde tieto moatice mozeme vyjadrit nasledovne:
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=0.25\textwidth]{include/defHandTheta.png}
+	\end{center}
+\end{figure}
+
 Lineárna aproximácia je najjednoduchšia aproximácia, ktorá sa používa pri aproximácii prevodovej
-charakteristiky. Na jej prevedenie sme potrebovali vytvoriť maticu \textbf{H}, vypočítať
-\(\theta\) Gaussovým vzťahom \(\theta = (H^TH)^-1H^Ty\) a následne sme pomocou vzťahu
-\(y_1 = H_1\theta_1\) vyjadriť funkciu opisujúcu funkciu pre výstupné veličiny. Hodnoty
-účelovej funkcie sme si vypočítali zo vzťahu \(Q1 = e^Te\). Na~Obr.~\ref{fig:prevod}
-môžeme vidieť porovnanie prevodových funkcií lineárnou aproximáciou.
+charakteristiky. Na jej prevedenie sme vytvorili maticu \textbf{H}, vypočítali
+\(\theta\) Gaussovým vzťahom
+\begin{equation}
+	\theta = (H^TH)^{-1}H^Ty
+	\label{eq:gausEq}
+\end{equation}
+
+a následne sme pomocou vzťahu \(y_1 = H_1\theta_1\) vyjadrili funkciu opisujúcu funkciu pre výstupné
+veličiny.
+
+Hodnoty účelovej funkcie sme si vypočítali zo vzťahu 
+\begin{equation}
+	Q1 = \frac{1}{2} e^Te
+	\label{eq:objFunkcia}
+\end{equation}
+
+Na~Obr.~\ref{fig:linApx} môžeme vidieť porovnanie prevodových funkcií lineárnou aproximáciou.
+
 
 \clearpage
 
