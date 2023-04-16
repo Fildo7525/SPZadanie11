@@ -229,26 +229,13 @@ Obr.~\ref{fig:prevod} zobrazuje porovnanie prevodových funkcií s lineárnou ap
 		\includegraphics[width=\textwidth]{include/odmocninova_regresia.png}
 	\end{center}
 	\caption{Odmocninova aproximácia tepelného systému.}
-
-	\label{fig:kvadApx}
-
 	\label{fig:odmApx}
-
 \end{figure}
 
 Odhadnutý funkčný vzťah:
 
 \begin{equation}
 	\hat{y} = \hat{\theta}_0 + \hat{\theta}_1 \sqrt{u}
-
-	\label{eq:kvadApx}
-\end{equation}
-
-Vztah \ref{eq:linApx} mozeme prepisat do maticoveho tvaru:
-\begin{equation}
-	\hat{y} = H_2\hat{\theta}_2
-	\label{eq:kvadApx2}
-
 	\label{eq:odmApx}
 \end{equation}
 
@@ -256,7 +243,6 @@ Vztah \ref{eq:odmApx} mozeme prepisat do maticoveho tvaru:
 \begin{equation}
 	\hat{y} = H_3\hat{\theta}_3
 	\label{eq:odmApx2}
-
 \end{equation}
 
 kde tieto moatice mozeme vyjadrit nasledovne:
@@ -288,7 +274,7 @@ Obr.~\ref{fig:prevod} zobrazuje porovnanie prevodových funkcií s lineárnou ap
 \section{Zhrnutie}
 \label{sec:zhrnutie}
 
-V tejto úlohe sme aproximovali namerané hodnoty teploty T2 pomocou troch rôznych spôsobov \ref{sec:kvad} \ref{sec:lin} \ref{sec:odm}.
+V tejto úlohe sme aproximovali namerané hodnoty teploty T2 pomocou troch rôznych spôsobov \ref{sec:kvad}, \ref{sec:lin} a \ref{sec:odm}.
 Ako môžeme vidieť na Obr.~\ref{fig:prevod} Kvadratická aproximácia nám najpresnejšie opisuje namerané hodnoty.
 
 \begin{figure}[!htbp]
