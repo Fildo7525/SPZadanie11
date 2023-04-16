@@ -139,13 +139,13 @@ Odhadnutý funkčný vzťah:
 	\label{eq:linApx}
 \end{equation}
 
-Vztah \ref{eq:linApx} mozeme prepisat do maticoveho tvaru:
+Vzťah \ref{eq:linApx} môžeme prepísať do maticového tvaru:
 \begin{equation}
 	\hat{y} = H_1\hat{\theta}_1
 	\label{eq:linApx2}
 \end{equation}
 
-kde tieto moatice mozeme vyjadrit nasledovne:
+Kde tieto matice môžeme vyjadriť nasledovne:
 
 \begin{figure}[!htbp]
 	\begin{center}
@@ -170,20 +170,20 @@ Hodnoty účelovej funkcie sme si vypočítali zo vzťahu
 	\label{eq:objFunkcia}
 \end{equation}
 
-Obr.~\ref{fig:linApx} ukazuje priebeh linearnej aproximácie tepelneho systemu a
-Obr.~\ref{fig:prevod} zobrazuje porovnanie prevodových funkcii a ich aproximacii.
+Obr.~\ref{fig:linApx} ukazuje priebeh lineárnej aproximácie tepelného systému a
+Obr.~\ref{fig:prevod} zobrazuje porovnanie prevodových funkcii a ich aproximácii.
 
 
 \clearpage
 
-\section{Kvadraticka aproximacia}
+\section{Kvadratická aproximácia}
 \label{sec:kvad}
 
 \begin{figure}[!htbp]
 	\begin{center}
 		\includegraphics[width=\textwidth]{include/kvadraticka_regresia.png}
 	\end{center}
-	\caption{Kvadraticka aproximácia tepelného systému.}
+	\caption{Kvadratická aproximácia tepelného systému.}
 	\label{fig:kvadApx}
 \end{figure}
 
@@ -194,13 +194,13 @@ Odhadnutý funkčný vzťah:
 	\label{eq:kvadApx}
 \end{equation}
 
-Vztah \ref{eq:kvadApx} mozeme prepisat do maticoveho tvaru:
+Vzťah \ref{eq:kvadApx} môžeme prepísať do maticového tvaru:
 \begin{equation}
 	\hat{y} = H_2\hat{\theta}_2
 	\label{eq:kvadApx2}
 \end{equation}
 
-kde tieto moatice mozeme vyjadrit nasledovne:
+Kde tieto matice môžeme vyjadriť nasledovne:
 
 \begin{figure}[!htbp]
 	\begin{center}
@@ -208,26 +208,26 @@ kde tieto moatice mozeme vyjadrit nasledovne:
 	\end{center}
 \end{figure}
 
-Kvadraticka aproximácia je druha aproximacia, ktoru sme pouzili.
+Kvadratická aproximácia je druha aproximácia, ktorú sme použili.
 Na jej prevedenie sme vytvorili maticu \textbf{H}, vypočítali
 \(\theta\) Gaussovým vzťahom a následne sme pomocou vzťahu~\ref{eq:kvadApx2}
-vyjadrili vztah opisujúci funkciu pre výstupné veličiny. Opis kvadratickej
-regresie vidime na obrazku Obr.~\ref{fig:kvadApx}.
+vyjadrili vzťah opisujúci funkciu pre výstupné veličiny. Opis kvadratickej
+regresie vidíme na obrázku Obr.~\ref{fig:kvadApx}.
 
-Hodnoty účelovej funkcie pocitame rovnakym sposobom ako vo vztahu~\ref{eq:objFunkcia}.
-Obr.~\ref{fig:kvadApx} ukazuje priebeh kvadraticke aproximácie tepelneho systemu a
-Obr.~\ref{fig:prevod} zobrazuje porovnanie prevodových funkcii a ich aproximacii.
+Hodnoty účelovej funkcie počítame rovnakým spôsobom ako vo vzťahu~\ref{eq:objFunkcia}.
+Obr.~\ref{fig:kvadApx} ukazuje priebeh kvadratickej aproximácie tepelného systému a
+Obr.~\ref{fig:prevod} zobrazuje porovnanie prevodových funkcii a ich aproximácii.
 
 \clearpage
 
-\section{Odmocninova aproximacia}
+\section{Odmocninová aproximácia}
 \label{sec:odm}
 
 \begin{figure}[!htbp]
 	\begin{center}
 		\includegraphics[width=\textwidth]{include/odmocninova_regresia.png}
 	\end{center}
-	\caption{Odmocninova aproximácia tepelného systému.}
+	\caption{Odmocninová aproximácia tepelného systému.}
 	\label{fig:odmApx}
 \end{figure}
 
@@ -238,13 +238,13 @@ Odhadnutý funkčný vzťah:
 	\label{eq:odmApx}
 \end{equation}
 
-Vztah \ref{eq:odmApx} mozeme prepisat do maticoveho tvaru:
+Vzťah \ref{eq:odmApx} môžeme prepísať do maticového tvaru:
 \begin{equation}
 	\hat{y} = H_3\hat{\theta}_3
 	\label{eq:odmApx2}
 \end{equation}
 
-kde tieto moatice mozeme vyjadrit nasledovne:
+Kde tieto matice môžeme vyjadriť nasledovne:
 
 \begin{figure}[!htbp]
 	\begin{center}
@@ -252,22 +252,23 @@ kde tieto moatice mozeme vyjadrit nasledovne:
 	\end{center}
 \end{figure}
 
-Odmocninova aproximácia je tretia aproximacia, ktoru sme pouzili.
+Odmocninová aproximácia je tretia aproximácia, ktorú sme použili.
 Na jej prevedenie sme vytvorili maticu \textbf{H}, vypočítali
 \(\theta\) Gaussovým vzťahom a následne sme pomocou vzťahu~\ref{eq:odmApx2}
-vyjadrili vztah opisujúci funkciu pre výstupné veličiny. Opis odmocninovej
-regresie vidime na obrazku Obr.~\ref{fig:odmApx}.
+vyjadrili vzťah opisujúci funkciu pre výstupné veličiny. Opis odmocninovej
+regresie vidíme na obrázku Obr.~\ref{fig:kvadApx}.
 
-Hodnoty účelovej funkcie pocitame rovnakym sposobom ako vo vztahu~\ref{eq:objFunkcia}.
-Obr.~\ref{fig:odmApx} ukazuje priebeh odmocninove aproximácie tepelneho systemu a
-Obr.~\ref{fig:prevod} zobrazuje porovnanie prevodových funkcii a ich aproximacii.
+Hodnoty účelovej funkcie počítame rovnakým spôsobom ako vo vzťahu~\ref{eq:objFunkcia}.
+Obr.~\ref{fig:odmApx} ukazuje priebeh odmocninovej aproximácie tepelného systému a
+Obr.~\ref{fig:prevod} zobrazuje porovnanie prevodových funkcii a ich aproximácii.
+
 \clearpage
 
 \section{Zhrnutie}
 \label{sec:zhrnutie}
 
-V tejto úlohe sme aproximovali namerané hodnoty teploty T2 pomocou troch rôznych spôsobov
-\textit{linearna} \ref{sec:lin}, \textit{kvadraticka} \ref{sec:kvad} a \textit{odmocninova} \ref{sec:odm}.
+V tejto úlohe sme aproximovali namerané hodnoty teploty \textit{T2} pomocou troch rôznych spôsobov
+\textit{lineárna} \ref{sec:lin}, \textit{kvadratická} \ref{sec:kvad} a \textit{odmocninová} \ref{sec:odm}.
 Ako môžeme vidieť na Obr.~\ref{fig:prevod} Kvadratická aproximácia nám najpresnejšie opisuje namerané hodnoty.
 
 \begin{figure}[!htbp]
