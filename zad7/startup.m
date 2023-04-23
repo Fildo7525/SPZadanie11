@@ -1,5 +1,8 @@
 %open('cv7_ident');
-load("4skoky.mat");
+clear;
+clc;
+
+out = load("4skoky.mat").out;
 logsout = out.get('logsout')
 u_signal = logsout.get('u')
 y_signal = logsout.get('y')
@@ -18,8 +21,8 @@ t = tm(indxs)
 
 z = iddata(y,u, 0.01) 
 
-na = 2
-nb = 2
+na = 1
+nb = 1
 nk = 1
 
 
@@ -27,22 +30,28 @@ n = [na,nb,nk]
 
 m = arx(z,n) 
 
-compare(z,m)
+compare(z,m);
 
 [a,b] = polyform(m) 
 
 sysdis = tf(b,a,0.01)
 
-ys = sim(m,u) 
+ys = sim(m,u) ;
+
+Odchylka = sum((y-ys).^2)
 
 figure(2)
-plot(t,y,t,ys)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-xlabel('t[s]')
-ylabel('y[V]')
-legend('y(t)','y_s(t)')
+plot(t,y,t,ys, "LineWidth", 2);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+xlabel('t[s]');
+ylabel('y[V]');
+legend('y(t)','y_s(t)');
+title("Porovnanie meranych a simulovanych dat")
+grid on;
 
 figure(3)
-plot(out.logsout{1}.Values)
+plot(out.logsout{1}.Values);
+grid on;
 
 figure(4)
-plot(out.logsout{2}.Values)
+plot(out.logsout{2}.Values);
+grid on;
