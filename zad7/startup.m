@@ -1,7 +1,7 @@
 %open('cv7_ident');
 clear;
 
-out = load("4skoky.mat").out;
+load("signal_s_5V_.mat");
 logsout = out.get('logsout');
 u_signal = logsout.get('u');
 y_signal = logsout.get('y');
