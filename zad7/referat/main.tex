@@ -157,17 +157,137 @@ Vstupné parametre rádov navrhovanej prenosovej funkcie sú:
 	\label{fig:I1}
 \end{figure}
 
-Parametre pri~prvej identifikácii sme nastavili na~predvolené hodnoty a~to~$n_a = 1$, $n_b = 1$ a~$n_k = 1$.
 Výsledná prenosová funkcia je:
 
 \begin{equation}
-	G_1(z) = \frac{0.01239}{z~- 0.993}
+	G_1(z) = \frac{0.01239}{z - 0.993}
 	\label{eq:I1}
 \end{equation}
 
-Odchýlka nám vyšla $e = 40.0690$
+Odchýlka nám vyšla $e = 40,0690$
 
 \clearpage
+
+\subsection{Druhá identifikácia}
+\label{subsec:I2}
+
+Vstupné parametre rádov navrhovanej prenosovej funkcie sú:
+
+\begin{lstlisting}[language=Matlab]
+	na = 3;
+	nb = 3;
+	nk = 1;
+\end{lstlisting}
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{include/I2.png}
+	\end{center}
+	\caption{Druhá identifikácia v~úlohe 2.}
+	\label{fig:I2}
+\end{figure}
+
+Výsledná prenosová funkcia je:
+
+\begin{equation}
+	G_2(z) = \frac{0.0004583 z^2 + 0.003255 z + 0.004532}{z^3 - 1.026 z^2 - 0.2949 z + 0.3258}
+	\label{eq:I2}
+\end{equation}
+
+Odchýlka nám vyšla $e = 38,2633$
+
+\clearpage
+
+\subsection{Tretia identifikácia}
+\label{subsec:I3}
+
+Vstupné parametre rádov navrhovanej prenosovej funkcie sú:
+
+\begin{lstlisting}[language=Matlab]
+	na = 4;
+	nb = 1;
+	nk = 1;
+\end{lstlisting}
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{include/I3.png}
+	\end{center}
+	\caption{Tretia identifikácia v~úlohe 2.}
+	\label{fig:I3}
+\end{figure}
+
+Výsledná prenosová funkcia je:
+
+\begin{equation}
+	G_3(z) = \frac{0.005763}{z^4 - 0.9211 z^3 - 0.387 z^2 - 0.009722 z + 0.3212}
+	\label{eq:I3}
+\end{equation}
+
+Odchýlka nám vyšla $e = 36,7178$.
+
+\clearpage
+
+\subsection{Štvrtá identifikácia}
+\label{subsec:I4}
+
+Vstupné parametre rádov navrhovanej prenosovej funkcie sú:
+
+\begin{lstlisting}[language=Matlab]
+	na = 8;
+	nb = 1;
+	nk = 1;
+\end{lstlisting}
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{include/I4.png}
+	\end{center}
+	\caption{Štvrtá identifikácia v~úlohe 2.}
+	\label{fig:I4}
+\end{figure}
+
+Výsledná prenosová funkcia je:
+
+\begin{equation}
+	G_3(z) = \frac{0.003601}{z^8 - 0.6473 z^7 - 0.3345 z^6 - 0.1646 z^5 - 0.1028 z^4 - 0.05178 z^3 + 0.04753 z^2 + 0.07217 z + 0.1834}
+	\label{eq:I4}
+\end{equation}
+
+Odchýlka nám vyšla $e = 30,3087$.
+
+\clearpage
+
+\subsection{Piata identifikácia}
+\label{subsec:I5}
+
+Vstupné parametre rádov navrhovanej prenosovej funkcie sú:
+
+\begin{lstlisting}[language=Matlab]
+	na = 8;
+	nb = 5;
+	nk = 1;
+\end{lstlisting}
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{include/I5.png}
+	\end{center}
+	\caption{Piata identifikácia v~úlohe 2.}
+	\label{fig:I5}
+\end{figure}
+
+Výsledná prenosová funkcia je:
+
+\begin{equation}
+	G_5(z) = \frac{0.0001377 z^4 + 0.003255 z^3 - 0.002104 z^2 + 0.002169 z + 0.0003051}{z^8 - 0.6464 z^7 - 0.3338 z^6 - 0.1644 z^5 - 0.103 z^4 - 0.05215 z^3 + 0.0471 z^2 + 0.07177 z + 0.1831}
+	\label{eq:I5}
+\end{equation}
+
+Odchýlka nám vyšla $e = 30,3875$.
+
+\clearpage
+
 
 \end{document}
 
