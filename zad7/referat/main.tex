@@ -295,6 +295,12 @@ Našou tretou úlohou je zobrať prenosovú funkciu, ktorá najlepšie opisovala
 iný tvar vstupného signálu. Ako je navrhované v~zadaní, zmenili sme hodnotu, okolo ktorej sa pohybuje vstupný signál.
 Túto hodnotu sme zvýšili zo~4V na~5V.
 
+Ustalene hodnoty vstupného signálu sú:
+\begin{itemize}
+	\item $U_0 = 5V$
+	\item $Y_0 = 8.6813$
+\end{itemize}
+
 \begin{figure}[!htbp]
 	\begin{center}
 		\includegraphics[width=0.95\textwidth]{include/uloha3.png}
@@ -304,11 +310,16 @@ Túto hodnotu sme zvýšili zo~4V na~5V.
 \end{figure}
 
 Ako môžeme vidieť na~obrázku Obr.~\ref{fig:u3}, identifikácia sa nám podarila presnejšie, ako pri~samotných meraniach.
-Odchýlka nám vyšla ale~vyšla $e = 200,5475$. To~kvôli tomu, že~simulácia začína z~hodnoty 0 a~z~meraných dát sme odsekli
-prvých 10 sekúnd. Vtedy bol systém už~usadený na~danej hodnote.
+Odchýlka nám vyšla $e = 4,3227$.
 
-\section{Zaver}
+\clearpage
+
+\section{Záver}
 \label{sec:zaver}
+
+Na základe porovnania simulovaného a meraného systému vieme z grafov skonštatovať, že simulovaná prenosová funkcia
+lepšie opisuje výsledný graf vo vyššom pracovnom bode $U_0 = 5V$ ako v pracovnom bode $U_0 = 4V$, kde bola funkcia
+navrhnutá.
 
 \end{document}
 
