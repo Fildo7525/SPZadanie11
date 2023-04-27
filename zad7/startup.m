@@ -12,7 +12,11 @@ tm = y_signal.Values.Time ;
 indxs = find(tm > 10); 
 
 U0 = 5; %4 %5
+<<<<<<< HEAD
 Y0 = 8.6425k; %6.94 %8.638
+=======
+Y0 = 8.6425; %6.94 %8.638
+>>>>>>> 63c42e14c2ed1bfde2a833209cb041088e4f8e71
 
 u = um(indxs)-U0;
 y = ym(indxs)-Y0;
