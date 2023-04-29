@@ -66,7 +66,7 @@
 Ôsme zadanie z~predmetu spojité procesy sa zaoberá skúmaním vplyvu zmien koeficientov PID regulátora
 na~ovládanie magnetickej levitácia. V~tomto zadaní budeme postupne meniť PID regulátor a~jeho \textbf{Proporcionálnu},
 \textbf{Integračnú} a~\textbf{Derivačnú} zložku. Na~obrázku Obr.~\ref{fig:schema} vidíme model magnetickej levitácia,
-ktorý sme použili pri~meraniach. Jednotlive parametre regulatora budeme menit v rozsahu $\pm20\%$.
+ktorý sme použili pri~meraniach. Jednotlive parametre regulatora budeme menit v~rozsahu $\pm20\%$.
 
 \begin{figure}[!htbp]
 	\begin{center}
@@ -96,9 +96,12 @@ ktorý sme použili pri~meraniach. Jednotlive parametre regulatora budeme menit 
 		\includegraphics[width=0.95\textwidth]{include/m1.png}
 	\end{center}
 	\caption{Zakladne hodnoty PID regulatora.}
-	\label{fig:}
+	\label{fig:m1}
 \end{figure}
 
+Obrazok Obr.~\ref{fig:m1} zobrazuje kmitavý tlmený proces s~preregulovaním. Mozeme vidiet, ze ci vyssie mal
+regulator udrzat kovovu gulicku, tym viac bol system rozkmitany. Pri~prvych petnastich sekundach merania
+magneticke pole nedokazalo dostatocne stabilizovat gulicku a~nastaval velky rozkmit v~ustalenej hodnote.
 
 \clearpage
 
@@ -119,7 +122,6 @@ ktorý sme použili pri~meraniach. Jednotlive parametre regulatora budeme menit 
 	\end{center}
 \end{table}
 
-
 \begin{figure}[!htbp]
 	\begin{center}
 		\includegraphics[width=0.8\textwidth]{./include/m2.png}
@@ -127,6 +129,11 @@ ktorý sme použili pri~meraniach. Jednotlive parametre regulatora budeme menit 
 	\caption{Graf prveho merania.}
 	\label{fig:meranie1}
 \end{figure}
+
+V~druhom merani sme zvysili \textbf{propoccionalnu} zlozku regulatora o~20\%. Vysledok je viditelny
+na~obrazku Obr.~\ref{fig:meranie1}. Taktiez ako v~predchadzajucom merani bolo prvych petnast sekund
+merania rozkmitanych. V~dalsich skokoch vidime vacsi ucinok derivacnej zlozky. Toto sposobilo zvysenie
+uz spomenutej proporcionalnej zlozky.
 
 \clearpage
 
@@ -154,6 +161,11 @@ ktorý sme použili pri~meraniach. Jednotlive parametre regulatora budeme menit 
 	\caption{Graf druheho merania.}
 	\label{fig:meranie2}
 \end{figure}
+
+V~tretom merani sme zmensili \textbf{propoccionalnu} zlozku regulatora o~20\%. Vysledok je viditelny
+na~obrazku Obr.~\ref{fig:meranie2}. Taktiez ako v~predchadzajucom merani bolo prvych petnast sekund
+merania rozkmitanych s tym rozdielom, ze zmensenie proporcionalnej zlozky malo za dosledok mensiu
+stabilitu systemu pri zmenseni ziadanej hodnoty.
 
 \clearpage
 
