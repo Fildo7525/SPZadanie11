@@ -68,6 +68,14 @@ na~ovládanie magnetickej levitácia. V~tomto zadaní budeme postupne meniť PID
 \textbf{Integračnú} a~Derivačnú zložku. Na~obrázku Obr.~\ref{fig:schema} vidíme model magnetickej levitácia,
 ktorý sme použili pri~meraniach. Jednotlive parametre regulatora budeme menit v rozsahu $\pm20\%$.
 
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{include/schema.png}
+	\end{center}
+	\caption{Schéma pre~model magnetickej levitácie.}
+	\label{fig:schema}
+\end{figure}
+
 \begin{table}[!htbp]
 	\caption{Koeficienty PID regulatora}
 	\label{tab:t0}
@@ -83,13 +91,14 @@ ktorý sme použili pri~meraniach. Jednotlive parametre regulatora budeme menit 
 	\end{center}
 \end{table}
 
-\begin{figure}[!htbp]
+\begin{figure}
 	\begin{center}
-		\includegraphics[width=0.95\textwidth]{include/schema.png}
+		\includegraphics[width=0.95\textwidth]{include/m1.png}
 	\end{center}
-	\caption{Schéma pre~model magnetickej levitácie.}
-	\label{fig:schema}
+	\caption{}
+	\label{fig:}
 \end{figure}
+
 
 \clearpage
 
@@ -113,7 +122,7 @@ ktorý sme použili pri~meraniach. Jednotlive parametre regulatora budeme menit 
 
 \begin{figure}[!htbp]
 	\begin{center}
-		\includegraphics[width=0.8\textwidth]{./include/m1.png}
+		\includegraphics[width=0.8\textwidth]{./include/m2.png}
 	\end{center}
 	\caption{Zadania z~cvičenia č. 7 z~predmetu spojité procesy.}
 	\label{fig:meranie1}
@@ -140,7 +149,7 @@ ktorý sme použili pri~meraniach. Jednotlive parametre regulatora budeme menit 
 
 \begin{figure}[!htbp]
 	\begin{center}
-		\includegraphics[width=0.8\textwidth]{./include/m2.png}
+		\includegraphics[width=0.8\textwidth]{./include/m3.png}
 	\end{center}
 	\caption{Zadania z~cvičenia č. 7 z~predmetu spojité procesy.}
 	\label{fig:meranie2}
@@ -167,7 +176,7 @@ ktorý sme použili pri~meraniach. Jednotlive parametre regulatora budeme menit 
 
 \begin{figure}[!htbp]
 	\begin{center}
-		\includegraphics[width=0.8\textwidth]{./include/m3.png}
+		\includegraphics[width=0.8\textwidth]{./include/m4.png}
 	\end{center}
 	\caption{Zadania z~cvičenia č. 7 z~predmetu spojité procesy.}
 	\label{fig:meranie3}
@@ -194,7 +203,7 @@ ktorý sme použili pri~meraniach. Jednotlive parametre regulatora budeme menit 
 
 \begin{figure}[!htbp]
 	\begin{center}
-		\includegraphics[width=0.8\textwidth]{./include/m4.png}
+		\includegraphics[width=0.8\textwidth]{./include/m6.png}
 	\end{center}
 	\caption{Zadania z~cvičenia č. 7 z~predmetu spojité procesy.}
 	\label{fig:meranie4}
@@ -211,9 +220,9 @@ ktorý sme použili pri~meraniach. Jednotlive parametre regulatora budeme menit 
 	\begin{center}
 		\begin{tabular}[c]{|l|l|}
 			\hline
-			P & 0.016 \\
-			I & 3.2 \\
-			D & 1 \\
+			P & 1 \\
+			I & 4 \\
+			D & 0.0128 \\
 			\hline
 		\end{tabular}
 	\end{center}
@@ -244,7 +253,7 @@ Posledne meranie sa zaobera skumanim vplyvu zvacsenia derivacnej zlozky PID regu
 			\hline
 			P & 1 \\
 			I & 4 \\
-			D & 0.0128 \\
+			D & 0.0192 \\
 			\hline
 		\end{tabular}
 	\end{center}
@@ -252,7 +261,7 @@ Posledne meranie sa zaobera skumanim vplyvu zvacsenia derivacnej zlozky PID regu
 
 \begin{figure}[!htbp]
 	\begin{center}
-		\includegraphics[width=0.8\textwidth]{./include/m6.png}
+		\includegraphics[width=0.8\textwidth]{./include/m7.png}
 	\end{center}
 	\caption{Zadania z~cvičenia č. 7 z~predmetu spojité procesy.}
 	\label{fig:meranie6}
