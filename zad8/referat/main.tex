@@ -68,6 +68,21 @@ na~ovládanie magnetickej levitácia. V~tomto zadaní budeme postupne meniť PID
 \textbf{Integračnú} a~Derivačnú zložku. Na~obrázku Obr.~\ref{fig:schema} vidíme model magnetickej levitácia,
 ktorý sme použili pri~meraniach. Jednotlive parametre regulatora budeme menit v rozsahu $\pm20\%$.
 
+\begin{table}[!htbp]
+	\caption{Koeficienty PID regulatora}
+	\label{tab:t0}
+	\begin{center}
+		\begin{tabular}[c]{|l|l|}
+			\hline
+
+			P & 1 \\
+			I & 4 \\
+			D & 0.016 \\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
 \begin{figure}[!htbp]
 	\begin{center}
 		\includegraphics[width=0.95\textwidth]{include/schema.png}
@@ -85,14 +100,14 @@ ktorý sme použili pri~meraniach. Jednotlive parametre regulatora budeme menit 
 	\begin{center}
 		\begin{tabular}[c]{|l|l|}
 			\hline
-
-			P & 0.016 \\
+			P & 1.2 \\
 			I & 4 \\
-			D & 1 \\
+			D & 0.016 \\
 			\hline
 		\end{tabular}
 	\end{center}
 \end{table}
+
 
 \begin{figure}[!htbp]
 	\begin{center}
@@ -101,8 +116,6 @@ ktorý sme použili pri~meraniach. Jednotlive parametre regulatora budeme menit 
 	\caption{Zadania z~cvičenia č. 7 z~predmetu spojité procesy.}
 	\label{fig:meranie1}
 \end{figure}
-
-
 
 \subsection{Meranie 2}
 \label{sec:meranie2}
@@ -113,10 +126,9 @@ ktorý sme použili pri~meraniach. Jednotlive parametre regulatora budeme menit 
 	\begin{center}
 		\begin{tabular}[c]{|l|l|}
 			\hline
-
-			P & 0.016 \\
+			P & 0.8 \\
 			I & 4 \\
-			D & 1.2 \\
+			D & 0.016 \\
 			\hline
 		\end{tabular}
 	\end{center}
@@ -139,10 +151,9 @@ ktorý sme použili pri~meraniach. Jednotlive parametre regulatora budeme menit 
 	\begin{center}
 		\begin{tabular}[c]{|l|l|}
 			\hline
-
-			P & 0.016 \\
-			I & 4 \\
-			D & 0.8 \\
+			P & 1 \\
+			I & 4.8 \\
+			D & 0.016 \\
 			\hline
 		\end{tabular}
 	\end{center}
@@ -156,19 +167,18 @@ ktorý sme použili pri~meraniach. Jednotlive parametre regulatora budeme menit 
 	\label{fig:meranie3}
 \end{figure}
 
-
 \subsection{Meranie 4}
 \label{sec:meranie4}
+
 \begin{table}[!htbp]
 	\caption{Koeficienty PID regulatora}
 	\label{tab:t4}
 	\begin{center}
 		\begin{tabular}[c]{|l|l|}
 			\hline
-
-			P & 0.016 \\
-			I & 4.8 \\
-			D & 1 \\
+			P & 1 \\
+			I & 3.2 \\
+			D & 0.016 \\
 			\hline
 		\end{tabular}
 	\end{center}
@@ -192,7 +202,6 @@ ktorý sme použili pri~meraniach. Jednotlive parametre regulatora budeme menit 
 	\begin{center}
 		\begin{tabular}[c]{|l|l|}
 			\hline
-
 			P & 0.016 \\
 			I & 3.2 \\
 			D & 1 \\
@@ -223,10 +232,9 @@ Posledne meranie sa zaobera skumanim vplyvu zvacsenia derivacnej zlozky PID regu
 	\begin{center}
 		\begin{tabular}[c]{|l|l|}
 			\hline
-
-			P & 0.0192 \\
+			P & 1 \\
 			I & 4 \\
-			D & 1 \\
+			D & 0.0128 \\
 			\hline
 		\end{tabular}
 	\end{center}
@@ -242,35 +250,6 @@ Posledne meranie sa zaobera skumanim vplyvu zvacsenia derivacnej zlozky PID regu
 
 
 
-\subsection{Meranie 7}
-\label{sec:meranie6}
-
-Posledne meranie sa zaobera skumanim vplyvu zvacsenia derivacnej zlozky PID regulatora na~ovladanie magnetickej levitacie.
-
-
-
-\begin{table}[!htbp]
-	\caption{Koeficienty PID regulatora}
-	\label{tab:t6}
-	\begin{center}
-		\begin{tabular}[c]{|l|l|}
-			\hline
-
-			P & 0.0128 \\
-			I & 4 \\
-			D & 1 \\
-			\hline
-		\end{tabular}
-	\end{center}
-\end{table}
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=0.95\textwidth]{include/m7.png}
-	\end{center}
-	\caption{}
-	\label{fig:}
-\end{figure}
 
 
 \end{document}
